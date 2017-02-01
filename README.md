@@ -11,6 +11,18 @@ Summary: ReST document generation tools for botocore.
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/bcdoc-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/bcdoc-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/bcdoc-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/bcdoc-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/bcdoc-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/bcdoc-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/bcdoc/badges/version.svg)](https://anaconda.org/conda-forge/bcdoc)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/bcdoc/badges/downloads.svg)](https://anaconda.org/conda-forge/bcdoc)
+
 Installing bcdoc
 ================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `bcdoc` available on your platform
 ```
 conda search bcdoc --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/bcdoc-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/bcdoc-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/bcdoc-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/bcdoc-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/bcdoc-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/bcdoc-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/bcdoc/badges/version.svg)](https://anaconda.org/conda-forge/bcdoc)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/bcdoc/badges/downloads.svg)](https://anaconda.org/conda-forge/bcdoc)
 
 
 Updating bcdoc-feedstock
