@@ -1,9 +1,9 @@
-{%set name = "bcdoc" %}
-{%set version = "0.16.0" %}
-{%set compress_type = "tar.gz" %}
-{%set hash_type = "sha256" %}
-{%set hash_val = "f568c182e06883becf7196f227052435cffd45604700c82362ca77d3427b6202" %}
-{%set build_num = "0" %}
+{% set name = "bcdoc" %}
+{% set version = "0.16.0" %}
+{% set compress_type = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_val = "f568c182e06883becf7196f227052435cffd45604700c82362ca77d3427b6202" %}
+{% set build_num = "0" %}
 
 package:
   name: {{ name|lower }}
@@ -16,18 +16,17 @@ source:
 
 build:
   number: {{ build_num }}
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
-
+    - pip
   run:
     - python
     - six >=1.8.0,<2.0.0
     - docutils >=0.10
-    - ordereddict >=1.1  # [py26]
 
 test:
   imports:
