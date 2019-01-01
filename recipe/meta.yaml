@@ -27,7 +27,6 @@ requirements:
     - python
     - six >=1.8.0,<2.0.0
     - docutils >=0.10
-    - ordereddict >=1.1  # [py26]
 
 test:
   imports:
