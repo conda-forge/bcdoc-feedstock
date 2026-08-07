@@ -1,0 +1,50 @@
+schema_version: 1
+
+context:
+  name: bcdoc
+  version: "0.16.0"
+  compress_type: tar.gz
+  hash_val: f568c182e06883becf7196f227052435cffd45604700c82362ca77d3427b6202
+  build_num: 0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.${{ compress_type }}
+  sha256: ${{ hash_val }}
+  file_name: ${{ name }}-${{ version }}.${{ compress_type }}
+
+build:
+  number: ${{ build_num }}
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - six >=1.8.0,<2.0.0
+    - docutils >=0.10
+
+tests:
+  - python:
+      imports:
+        - bcdoc
+      pip_check: false
+      python_version:
+        - ${{ python_min }}
+        - "*"
+
+about:
+  license: Apache-2.0
+  license_file: LICENSE.txt
+  summary: ReST document generation tools for botocore.
+  homepage: https://github.com/boto/bcdoc
+
+extra:
+  recipe-maintainers:
+    - pmlandwehr
